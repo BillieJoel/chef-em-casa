@@ -1,50 +1,48 @@
 <?php
 
-$currentPage = 'index';
-include_once(__DIR__.'/components/header.php');
+ $pageInfo = array(
+  'title' => 'Cadastro - Chef em Casa',
+  'description' => 'Cadastre-se no Chef em Casa.',
+  'pageName' => 'register',
+);
 
-
-
+$pageName = $pageInfo['pageName'];
+include_once(__DIR__ . '/components/public/header.php');
 ?>
 
-
-
-<main class="container pg-5">
-<h1>Cadastre-se</h1>
-<div class="jumbotron">
-  <h1 class="display-4">olá usuario</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-</div>
-<form action="register_post.php" method="post">
-
-  <div class="form-group">
-    <label for="name">nome</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted">digite seu nome completo.</small>
+<main class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow">
+        <div class="card-body">
+          <h2 class="text-center mb-4">Cadastre-se</h2>
+          
+          <!-- Formulário de Cadastro -->
+          <form action="requests/register_post.php" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nome completo</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+          </form>
+          
+          <div class="text-center mt-3">
+            <p>Já tem uma conta? <a href="login.php">Faça login aqui.</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email </label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <small id="emailHelp" class="form-text text-muted">digite seu email</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">senha</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-    <small id="emailHelp" class="form-text text-muted">crie sua senha<re/small>
-  </div>
-
-  <button type="submit" class="btn btn-success">cadastre-se</button>
-
-
-</form>
-
 </main>
+
 <?php
-include_once(__DIR__.'/components/footer.php');
-
-
-
+  include_once(__DIR__ . '/components/public/footer.php');
 ?>

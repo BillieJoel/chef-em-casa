@@ -1,21 +1,21 @@
 {
   "name": "chef-em-casa",
   "version": "1.0.0",
-  "description": "projeto desenvolvido no curso do senac",
-  "main": "index.js",
+  "description": "Projeto do Senac",
+  "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BillieJoel/chef-em-casa.git"
+    "url": "git+https://github.com/aeusteixeira/chef-em-casa.git"
   },
-  "author": "guilherme magalhães",
-  "license": "ISC",
+  "author": "Matheus Teixeira",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BillieJoel/chef-em-casa/issues"
+    "url": "https://github.com/aeusteixeira/chef-em-casa/issues"
   },
-  "homepage": "https://github.com/BillieJoel/chef-em-casa#readme",
+  "homepage": "https://github.com/aeusteixeira/chef-em-casa#readme",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "jquery": "^3.3.1",
